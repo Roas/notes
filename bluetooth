@@ -1,0 +1,47 @@
+Commands: service bluetooth start bluetoothctl power on agent on scan on
+
+Only the first time: pair AA:BB:CC:DD:EE:FF connect AA:BB:CC:DD:EE:FF
+
+When you found the device: scan off
+
+
+Permanent
+
+=================
+
+
+Setting up auto connection
+
+
+To make your headset auto connect you need to enable PulseAudio's
+switch-on-connect module. Do this by adding the following lines to your the
+following to your /etc/pulse/default.pa:
+
+
+/etc/pulse/default.pa
+
+
+# automatically switch to newly-connected devices
+
+load-module module-switch-on-connect
+
+
+Now make bluetoothctl trust your Bluetooth headset by running trust
+00:1D:43:6D:03:26 inside the bluetoothctl console to prevent errors similar to:
+
+
+bluetoothd[487]: Authentication attempt without agent
+
+bluetoothd[487]: Access denied: org.bluez.Error.Rejected
+
+
+[bluetooth]# trust 00:1D:43:6D:03:26
+
+
+By default, your Bluetooth adapter will not power on after a reboot. The former
+method by using hciconfig hci0 up is deprecated, see the release note. Now you
+just need to add the line AutoEnable=true in /etc/bluetooth/main.conf at the
+bottom in the [Policy] section:
+
+
+/etc/bluetooth/main.conf
