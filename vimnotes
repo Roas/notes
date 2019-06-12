@@ -1,0 +1,81 @@
+0	Move the cursor to beginning of line
+$ 	Move the cursor to the end of line
+^	Move the cursor to the first non empty character of the line
+w	Move forward one word
+W	Move forward one word, but a little differently
+5w	Move forward 5 words
+b	Move back one word
+B	Move back one word, but a little differently
+5b	Move back 5 words
+G	Move to the end of file
+gg	Move to the beginning of the file
+
+(	Jump to previous sentence
+)	Jump to next sentence
+{	Jump to previous paragraph
+} 	Jump to the next paragraph
+[[	Jump to the previous section
+]] 	Jump to the next section
+[]	Jump to the end of the previous section
+][	Jump to the end of the next section
+
+a	Insert text after the cursor
+A	Insert text at the end of the line
+i	Insert text before the cursor
+
+:r []	Insert the file [filename] below the cursor
+:r! []	Execute [command] and insert its output below the cursor
+
+x	Delete character at cursor
+dw	Delete a word
+d0	Delete to the beginning of line
+d$	Delete to the end of line
+d) 	Delete to the end of sentence
+dgg	Delete to the beginning of file
+dG	Delete to the end of the file
+dd	Delete the line
+3dd	Delete 3 lines
+
+r{text}	Replace the character under the cursor with {text}
+R	Replace characters instead of inserting them
+
+yy	Copy current line into storage buffer
+["x]yy	Copy current lines into register x
+p	Paste storage buffer after current line
+P 	Paste storage buffer before current line
+["x]p 	Paste from register x after current line
+["x]P 	Paste from register x before current line
+
+u	Undo last operation
+Ctrl+r	Redo the last undo
+
+/search_text	search document for search_text going forward
+?search_text	search document for search_text going backward
+n		next result
+N		previous result
+:%s/original/replacement	Replace first occurence
+:%s/original/replacement/g 	Replace all occurences
+:%s/original/replacement/gc	Replace all but ask for confirmation
+
+v	Enter visual mode per character
+V	Enter visual mode per line
+
+These are on selected text
+~	Switch case
+d	Delete a word 
+c	change
+y	Yank
+>	Shift right
+<	Shift left
+!	filter through an external command
+
+Save and quit
+:q		Quits vim but fails if the file has been changed
+:w		Save the file
+:w new_name	Save the file with the new_naem filename
+:wq		Save the file and quit Vim
+:q!		Quit vim without saving the changes
+ZZ		Write file, if modified, and quit Vim
+ZQ		Same as :q!
+
+zz		Centers the cursor on the screen	

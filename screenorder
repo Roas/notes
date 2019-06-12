@@ -1,0 +1,7 @@
+The following instruction lets you turn the screen order around:
+
+Use the command xrandr to find the name codes you need.
+
+Then use the following command to change the order:
+
+xrandr --output HDMI-0 --right-of VGA-0
