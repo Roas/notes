@@ -79,3 +79,5 @@ ZZ		Write file, if modified, and quit Vim
 ZQ		Same as :q!
 
 zz		Centers the cursor on the screen	
+zt		Put cursor on top of the screen.
+zb		Put cursor on bottom of the screen

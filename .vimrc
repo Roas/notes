@@ -13,6 +13,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
+map ; :Files<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 command! Tex :!pdflatex main.tex

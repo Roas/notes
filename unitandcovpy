@@ -1,0 +1,16 @@
+To run unittests without the complaining about ImportErrors:
+
+$ python -m unittest [path]
+
+To get the code coverage report in python:
+
+$ coverage run -m unittest [path]
+
+This is done with Coverage.py if you want to google for more info.
+
+To get the report the commands below can be used.
+
+$ coverage html
+$ coverage report
+
+To start the html one, take a look in htmlcov/index.html
