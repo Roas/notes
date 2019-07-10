@@ -1,8 +1,10 @@
 set number
+filetype plugin on
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -10,11 +12,28 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'w0rp/ale'
+
+Plug 'google/vim-colorscheme-primary'
+"Plug 'junegunn/seoul256.vim'
+
 call plug#end()
 
+" Google color scheme
+set t_Co=256
+colorscheme primary
+
+" Seoul256 color scheme
+"let g:seoul256_background = 233
+"color seoul256
+
+syntax enable
+set background=dark
+
 map <C-n> :NERDTreeToggle<CR>
-map ; :Files<CR>
+map <C-t> :Files<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-command! Tex :!pdflatex main.tex
-command! Bib :!bibtex main
+map <f2> :!pdflatex main.tex<CR>
+map <f3> :!bibtex main<CR>
+map <f4> :!thunar main.pdf<CR>

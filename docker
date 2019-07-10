@@ -1,0 +1,2 @@
+Starting a simple mysql instance:
+docker run -d -p 3306:3306 --name=mysql_server --env="MYSQL_ROOT_PASSWORD=root" mysql
