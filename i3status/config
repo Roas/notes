@@ -1,0 +1,42 @@
+general {
+    output_format = "i3bar"
+    separator = "  "
+}
+
+order += "cpu_temperature 0"
+order += "cpu_usage"
+order += "volume master"
+order += "ethernet enp3s0" 
+order += "disk /"
+order += "tztime local"
+
+disk "/" {
+    prefix_type = "binary"
+    format = " %free ( %percentage_free ) / %total "
+}
+
+tztime local {
+    format = " %Y-%m-%d %H:%M:%S %Z "
+    timezone = "Europe/Berlin"
+}
+
+ethernet enp3s0 {
+    format_up = " E: %ip (%speed) "
+    format_down = " E: down "
+}
+
+volume master {
+    format = " Vol: %volume "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+cpu_temperature 0 {
+    format = " T: %degrees °C "
+}
+
+cpu_usage {
+    format = " CPU: %usage "
+}
+
