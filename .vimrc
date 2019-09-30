@@ -1,5 +1,7 @@
 set number
 filetype plugin on
+set splitbelow
+set splitright
 
 call plug#begin('~/.vim/plugged')
 
