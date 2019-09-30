@@ -19,11 +19,11 @@ Plug 'junegunn/fzf.vim'
 "Plug 'google/vim-colorscheme-primary'
 "Plug 'junegunn/seoul256.vim'
 "Plug 'blueshirts/darcula'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
-colorscheme solarized
+"colorscheme darcula
 " Google color scheme
 "set t_Co=256
 "colorscheme primary
@@ -39,7 +39,7 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Files<CR>
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-map <f2> :!pdflatex main.tex<CR>
-map <f3> :!bibtex main<CR>
-map <f4> :!thunar main.pdf<CR>
+"map <f2> :!pdflatex main.tex<CR>
+"map <f3> :!bibtex main<CR>
+"map <f4> :!thunar main.pdf<CR>
 
