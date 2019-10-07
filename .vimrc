@@ -1,5 +1,6 @@
 set number
 filetype plugin on
+set colorcolumn=120
 set splitbelow
 set splitright
 
@@ -13,6 +14,8 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+Plug 'nvie/vim-flake8'
 
 "Plug 'w0rp/ale'
 
