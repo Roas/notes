@@ -165,3 +165,9 @@ exec screenorder
 exec ./home/sander/scripts/capslockbackspace
 exec xset r rate 220 180
 
+exec xmodmap ~/.xmodmap
+exec xset r rate 220 180
+bindsym Mod1+j workspace prev
+bindsym Mod1+semicolon workspace next
+
+for_window [class="^.*"] border pixel 0

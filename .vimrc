@@ -3,6 +3,7 @@ filetype plugin on
 set colorcolumn=120
 set splitbelow
 set splitright
+set cplitboard=unnamed
 
 call plug#begin('~/.vim/plugged')
 
@@ -14,6 +15,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug '907th/vim-auto-save'
 
 Plug 'nvie/vim-flake8'
 
