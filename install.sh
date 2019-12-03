@@ -6,6 +6,7 @@ sudo apt update
 sudo apt install zathura
 sudo apt install chromium
 sudo apt install alsamixer
+sudo snap install spotify
 
 echo -e "\e[7mInstalling and setting up vim...\e[27m"
 sudo apt install vim
