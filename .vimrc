@@ -39,6 +39,7 @@ call plug#end()
 
 syntax enable
 set background=dark
+map <C-t> :tabnew<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Files<CR>
