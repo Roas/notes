@@ -3,12 +3,13 @@ filetype plugin on
 set colorcolumn=120
 set splitbelow
 set splitright
-set cplitboard=unnamed
+set clipboard=unnamed
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
+Plug 'mgedmin/python-imports.vim'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -43,6 +44,9 @@ map <C-t> :tabnew<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 map <C-f> :Files<CR>
+map <C-t> :tabnew<CR>
+map <F5> :ImportName<CR>
+let g:auto_save = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 "map <f2> :!pdflatex main.tex<CR>
